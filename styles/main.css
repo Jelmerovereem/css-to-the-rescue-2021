@@ -1,3 +1,205 @@
+/* RESOURCES 
+(nathan) bird illustration : https://codepen.io/aitchiss/pen/BaKNejq
+(nathan) CSS Costum properties: https://medium.com/better-programming/introduction-to-css-custom-properties-66b9474d3012
+(nathan) Guide to calc() : https://css-tricks.com/a-complete-guide-to-calc-in-css/
+(nathan) Appendings units with calc: https://www.kevinpowell.co/article/how-to-append-a-unit-to-a-custom-property-with-calc/
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[data-theme="nathan"] {
+    /* bird */
+    --blue: #063970;
+    --white: white;
+    --gray-light: #AAAAA9;
+    --gray-dark: #575556;
+    --yellow: #F0C756;
+
+    /* other colors  */
+    --lightblue: #2792CB;
+    --island-blue: #67B3DA;
+
+    /* fonts  */
+    --font: 'Dosis', sans-serif;
+
+    /* margins  */
+    --default-margin: 1rem;
+
+    /* widths and heights  */
+    --width: 100;
+    --height: 100;
+}
+
+
+
+.el {
+    max-width: calc(var(--width) * .8vw);
+    min-height: calc(var(--height) * .3rem);
+    background: var(--lightblue);
+    font-family: var(--font);
+    color: white;
+    margin: calc(var(--default-margin) * 2) auto;
+    border-radius: .5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.el:hover .head::before {
+    background: red;
+    transition: background .3s ease-in;
+}
+
+
+
+.el h2 {
+    text-align: center;
+    padding: var(--default-margin);
+    font-size: 4vw;
+}
+
+.el p {
+    text-align: center;
+    padding: var(--default-margin);
+    font-size: 2vw;
+    transition: opacity 1s ease-in;
+    opacity: 0;
+
+}
+
+.el:hover p {
+    transition: opacity 1s ease-in;
+    opacity: 1;
+}
+
+
+.box-canvas {
+    position: relative;
+    margin: calc(var(--default-margin) * 2) auto;
+    display: block;
+    width: calc(var(--width) * 2px);
+    height: calc(var(--height) * 2px);
+
+}
+
+.box-canvas::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+    width: calc(var(--width) * 2.5px);
+    height: calc(var(--height) * 1px);
+    background: var(--island-blue);
+    border-radius: 30% 70% 23% 77% / 53% 30% 70% 47%;
+}
+
+.birdbody {
+    top: 30px;
+    width: calc(var(--width) * 1.5px);
+    height: calc(var(--height) * .7px);
+    position: absolute;
+    background: var(--white);
+    border-radius: 0 50% 50% 50%;
+    left: 15px;
+}
+
+.wing {
+    position: absolute;
+    left: 30px;
+    top: -4px;
+    width: calc(var(--width) * 1.25px);
+    height: calc(var(--height) * .6px);
+    background: var(--gray-light);
+    border-radius: 25% 75% 9% 91% / 64% 78% 22% 36%;
+    overflow: hidden;
+}
+
+.tail {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    background: var(--gray-dark);
+    width: calc(var(--width) * 1.2px);
+    height: calc(var(--height) * .2px);
+    transform: rotate(20deg);
+    border-radius: 0 50% 50% 0;
+}
+
+.neck {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(var(--width) * .3px);
+    height: calc(var(--height) * .2px);
+    background: var(--white);
+    border-radius: 50% 50% 0 0;
+}
+
+.head {
+    position: absolute;
+    width: calc(var(--width) * .5px);
+    height: calc(var(--height) * .5px);
+    border-radius: 50% 50% 0 50%;
+    background: var(--white);
+}
+
+.head::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: calc(var(--width) * .08px);
+    height: calc(var(--height) * .08px);
+    background: black;
+    border-radius: 50%;
+    border: 2px solid var(--yellow);
+    transition: background .5s ease-in;
+}
+
+.beak {
+    position: absolute;
+    top: 50%;
+    left: -26px;
+    transform: translateY(-50%);
+    width: calc(var(--width) * .3px);
+    height: calc(var(--height) * .15px);
+    background: var(--yellow);
+    border-radius: 91% 9% 9% 91% / 100% 40% 60% 0%;
+}
+
+.leg {
+    position: absolute;
+    width: calc(var(--width) * .05px);
+    height: calc(var(--height) * .5px);
+    background: var(--yellow);
+}
+
+.leg.left {
+    left: 60px;
+    top: 70px;
+}
+
+.leg.right {
+    left: 80px;
+    top: 80px;
+}
+
+.leg::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -14px;
+    background: var(--yellow);
+    width: calc(var(--width) * .2px);
+    height: calc(var(--height) * .25px);
+    clip-path: polygon(38% 0, 58% 0, 100% 100%, 0% 100%);
+    transform: rotate(40deg);
+}
+
 #jelmer {
 	font-family: "Open sans", sans-serif;
 	--color-background: #4185d9 ; /* blauw tint */
