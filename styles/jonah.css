@@ -9,18 +9,16 @@ input[value='a4']:checked ~ #jonah {
   width: 21cm;
   height: 29.7cm;
 }
+
 input[value='a5']:checked ~ #jonah {
   height: 21cm;
-  width: 14.85cm;
+  width: 148.5mm;
 }
 
 #jonah {
   box-sizing: border-box;
-  padding: 12pt;
-  width: 21cm;
-  height: 29.7cm;
-  /* width: 8.5in; */
-  /* height: 11in; */
+  padding: 6mm;
+  padding: 24q;
   margin: 0 auto;
   background: repeating-linear-gradient(
     #fff,
