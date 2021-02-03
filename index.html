@@ -1,51 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Kenningsmakings opdracht - Octo's A1</title>
-		<link rel="stylesheet" href="styles/main.css">
-	</head>
-	<body>
-		<main>
-			<article>
-				<h2>CSS technieken</h2>
-				<section id="nathan">
-					
-				</section>
-				<section id="jelmer">
-					<a href="https://www.github.com/Jelmerovereem" target="_blank">@jelmerovereem</a>
-					<section>
-						<h3>Custom properties Fallbacks</h3>
-						<p>Een fallback gebruik je om foutjes in je custom properties te ondersteunen.</p>
-						<p>Single fallback</p>
-						<div>
-							<img src="https://jelmerovereem.github.io/kickoff-2021/assets/avatar.jpg" alt="">
-						</div>
-						<p>Nested fallback</p>
-						<div></div>
-					</section>
-					<section>
-						<h3>Custom properties Logica</h3>
-						<label for="switch">Magic</label>
-						<input type="checkbox" id="switch">
-						<div></div>
-					</section>
-					<section>
-						<h3>Custom properties Theme</h3>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, ducimus totam, doloremque consequatur, suscipit exercitationem provident et voluptates cum nostrum maxime voluptatibus nam eius consectetur tenetur hic quo autem. Porro id nobis consequatur architecto alias enim cum, explicabo earum similique placeat consequuntur velit perferendis unde fugit suscipit sapiente blanditiis tempora.</p>
-						<div>
-							<div></div>
-							<div>
-								<img src="assets/barn.svg" alt="">
-							</div>
-						</div>
-					</section>
-				</section>
-				<section id="jonah">
-					
-				</section>
-			</article>
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenningsmakings opdracht - Octo's A1</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/jonah.css" />
+  </head>
+  <body>
+    <main>
+      <article>
+        <h2>CSS technieken</h2>
+        <section id="nathan"> </section>
+        <section id="jelmer">
+          <a href="https://www.github.com/Jelmerovereem" target="_blank"
+            >@jelmerovereem</a
+          >
+          <section>
+            <h3>Custom properties Fallbacks</h3>
+            <p
+              >Een fallback gebruik je om foutjes in je custom properties te
+              ondersteunen.</p
+            >
+            <p>Single fallback</p>
+            <div>
+              <img
+                src="https://jelmerovereem.github.io/kickoff-2021/assets/avatar.jpg"
+                alt=""
+              />
+            </div>
+            <p>Nested fallback</p>
+            <div></div>
+          </section>
+          <section>
+            <h3>Custom properties Logica</h3>
+            <label for="switch">Magic</label>
+            <input type="checkbox" id="switch" />
+            <div></div>
+          </section>
+          <section>
+            <h3>Custom properties Theme</h3>
+            <p
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+              ducimus totam, doloremque consequatur, suscipit exercitationem
+              provident et voluptates cum nostrum maxime voluptatibus nam eius
+              consectetur tenetur hic quo autem. Porro id nobis consequatur
+              architecto alias enim cum, explicabo earum similique placeat
+              consequuntur velit perferendis unde fugit suscipit sapiente
+              blanditiis tempora.</p
+            >
+            <div>
+              <div></div>
+              <div>
+                <img src="assets/barn.svg" alt="" />
+              </div>
+            </div>
+          </section>
+        </section>
+        <section id="jonah">
+          <h2>Jonah's (absolute) unit avontuur</h2>
+          <p>
+            Je kent de standaard units wel: px, em, rem. Percentages zal je ook
+            wel kennen, en eventueel de viewport units (vw en vh), maar er zijn
+            er veel meer!
+          </p>
+          <h3>Wat coole size-units</h3>
+          <ul>
+            <li>
+              Deze tekst pakt de minst lange kant van het browser venster, en
+              neem daarvan 2% om de font-size te bepalen
+            </li>
+            <li>
+              Deze tekst pakt de langste kant van het browser venster, en neem
+              daarvan 1% om de font-size te bepalen
+            </li>
+            <li>
+              Deze tekst heeft een font size van 1pc (wat blijkbaar pica
+              betekent en 12pt groot is)
+            </li>
+            <li>Deze tekst ook, maar dan uitgedrukt in pt</li>
+            <li>
+              Deze tekst is 3 keer zo groot als de breedte de glyph "0" in het
+              lettertype (uitgedrukt in ch, wat goed bier ook heeft)
+            </li>
+            <li>
+              Voor de mensen die achterwaarts werken is deze tekst 0,2 inches
+              groot
+            </li>
+            <li>Voor de gewone mens is dit een halve centimeter</li>
+            <li>
+              Maar als je toch een beetje wappie bent heb je hier een tekst van
+              20 kwart-millimeters
+            </li>
+            <li>Hier, 5 millimeter. Een stuk normaler</li>
+            <li>
+              Hier, heb 3 exen, en dan heb ik het over de x-hoogte van letters.
+              Dat is even hoog als deze letter "o"
+            </li>
+          </ul>
+          <h3>Wat andere soorten units</h3>
+          <ul>
+            <li>
+              Deze tekst is 1/20e rotatie gedraaid met
+              <code>transform: rotate(0.05turn);</code>. 1 turn is 360 graden
+            </li>
+            <li>
+              Deze tekst is 20 gradians gedraaid met
+              <code>transform: rotate(20grad);</code>. 400grad is 1turn
+            </li>
+            <li>
+              Je hebt ook nog <code>rads</code>, maar daar zou ik niet aan
+              beginnen, tenzij je van wiskunde houdt net zoals Sanne. Daarvoor
+              heb je
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/angle#rad"
+                target="_blank"
+              >
+                hier de docs
+              </a>
+            </li>
+          </ul>
+          <h3>Wat over mij</h3>
+          <p>
+            Ik vind productiviteit een erg interessant onderwerp, en leer er
+            continu meer over.
+          </p>
+          <h4>Wat ik gebruik</h4>
+          <ul>
+            <li>Things 3</li>
+            <li>Fantastical</li>
+            <li>Craft Notes</li>
+            <li>Baronfig Confidant notebook</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+  </body>
 </html>
