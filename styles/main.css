@@ -51,6 +51,7 @@
 
 .el:hover .head::before {
     background: red;
+    transition: background .3s ease-in;
 }
 
 
@@ -156,6 +157,7 @@
     background: black;
     border-radius: 50%;
     border: 2px solid var(--yellow);
+    transition: background .5s ease-in;
 }
 
 .beak {
