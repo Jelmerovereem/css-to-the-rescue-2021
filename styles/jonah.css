@@ -1,79 +1,101 @@
-#jonah h2 {
-  font-size: 80q;
-  line-height: 1ex;
-  height: 1ex;
-  // overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@200&family=Playfair+Display:wght@900&display=swap');
+
+input[value='us-letter']:checked ~ #jonah {
+  width: 8.5in;
+  height: 11in;
 }
 
-#jonah p:nth-child(2) {
-  font-size: 2vmin;
-  line-height: 1.125em;
-  height: 3rem;
+input[value='a4']:checked ~ #jonah {
+  width: 21cm;
+  height: 29.7cm;
+}
+input[value='a5']:checked ~ #jonah {
+  height: 21cm;
+  width: 14.85cm;
 }
 
+#jonah {
+  box-sizing: border-box;
+  padding: 12pt;
+  width: 21cm;
+  height: 29.7cm;
+  /* width: 8.5in; */
+  /* height: 11in; */
+  margin: 0 auto;
+  background: repeating-linear-gradient(
+    #fff,
+    #fff 12pt,
+    rgb(244, 159, 10) 12pt,
+    rgb(244, 159, 10) 13pt
+  );
+  font-family: 'Cabin', sans-serif;
+}
+
+#jonah * {
+  margin: 0;
+}
+
+#jonah h2,
 #jonah h3 {
-  font-size: clamp(7.5mm, 2vw, 1.5cm);
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 900;
+  line-height: 2ex;
 }
 
-#jonah ul:first-of-type li:nth-child(1) {
-  font-size: 2vmin;
+#jonah h2 {
+  font-size: 2pc;
+  margin-bottom: calc(1pc + 5pt);
 }
 
-#jonah ul:first-of-type li:nth-child(2) {
-  font-size: 1vmax;
-}
-
-#jonah ul:first-of-type li:nth-child(3) {
+#jonah p {
   font-size: 1pc;
+  line-height: calc(1pc + 1pt);
 }
 
-#jonah ul:first-of-type li:nth-child(4) {
-  font-size: 12pt;
+#jonah p + p {
+  margin-top: calc(1pc + 2pt);
 }
 
-#jonah ul:first-of-type li:nth-child(5) {
-  font-size: 3ch;
+#jonah ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: calc(1pc + 1pt);
 }
 
-#jonah ul:first-of-type li:nth-child(6) {
-  font-size: 0.2in;
+#jonah ul li {
+  font-size: 1pc;
+  line-height: 1pc;
+  margin-bottom: calc(1pc + 2pt);
+  width: min-content;
+  white-space: nowrap;
 }
 
-#jonah ul:first-of-type li:nth-child(7) {
-  font-size: 0.5cm;
+#jonah ul li:before {
+  content: '- ';
 }
 
-#jonah ul:first-of-type li:nth-child(8) {
-  font-size: 20q;
+#jonah ul li:nth-last-of-type(4):first-child,
+#jonah ul li:nth-last-of-type(4):first-child ~ li {
+  background: linear-gradient(to bottom right, lightgreen, darkgreen);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: calc(1pc + 1.5pt);
 }
 
-#jonah ul:first-of-type li:nth-child(9) {
-  font-size: 5mm;
+#jonah ul li:nth-last-of-type(4):first-child:hover,
+#jonah ul li:nth-last-of-type(4):first-child ~ li:hover {
+  transform: rotate(0.5turn);
 }
 
-#jonah ul:first-of-type li:nth-child(10) {
-  font-size: 3ex;
-}
-
-#jonah ul:nth-of-type(2) {
-  margin-bottom: 18rem;
-}
-
-#jonah ul:nth-of-type(2) li:first-child {
-  transform: rotate(0.05turn);
-  transform-origin: left;
-}
-
-#jonah ul:nth-of-type(2) li:nth-child(2) {
-  transform: rotate(20grad);
-  transform-origin: left;
-}
-
-#jonah ul:nth-of-type(2) li:nth-child(3) {
-  transform: rotate(18deg);
-  transform-origin: left;
-}
-
-#jonah p:nth-of-type(2) {
-  font-size: min(20px, 0.05vmax);
+#jonah ul li:nth-last-of-type(4):first-child:before,
+#jonah ul li:nth-last-of-type(4):first-child ~ li:before {
+  content: '✅';
+  margin-right: 1em;
+  font-size: 10pt;
+  position: relative;
+  top: -2pt;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
 }
