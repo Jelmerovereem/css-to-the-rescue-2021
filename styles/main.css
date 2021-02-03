@@ -65,13 +65,13 @@
     text-align: center;
     padding: var(--default-margin);
     font-size: 2vw;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in;
     opacity: 0;
 
 }
 
 .el:hover p {
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in;
     opacity: 1;
 }
 
