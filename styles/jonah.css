@@ -17,8 +17,8 @@ input[value='a5']:checked ~ #jonah {
 
 #jonah {
   box-sizing: border-box;
-  padding: 6mm;
-  padding: 24q;
+  padding: 4.5mm;
+  padding: 18q;
   margin: 0 auto;
   background: repeating-linear-gradient(
     #fff,
