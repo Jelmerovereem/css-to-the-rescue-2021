@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@200&family=Playfair+Display:wght@900&display=swap');
+
+input[value='us-letter']:checked ~ #jonah {
+  width: 8.5in;
+  height: 11in;
+}
+
+input[value='a4']:checked ~ #jonah {
+  width: 21cm;
+  height: 29.7cm;
+}
+
+input[value='a5']:checked ~ #jonah {
+  height: 21cm;
+  width: 148.5mm;
+}
+
+#jonah {
+  box-sizing: border-box;
+  padding: 4.5mm;
+  padding: 18q;
+  margin: 0 auto;
+  background: repeating-linear-gradient(
+    #fff,
+    #fff 12pt,
+    rgb(244, 159, 10) 12pt,
+    rgb(244, 159, 10) 13pt
+  );
+  font-family: 'Cabin', sans-serif;
+}
+
+#jonah * {
+  margin: 0;
+}
+
+#jonah h2,
+#jonah h3 {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 900;
+  line-height: 2ex;
+}
+
+#jonah h2 {
+  font-size: 2pc;
+  margin-bottom: calc(1pc + 5pt);
+}
+
+#jonah p {
+  font-size: 1pc;
+  line-height: calc(1pc + 1pt);
+}
+
+#jonah p + p {
+  margin-top: calc(1pc + 2pt);
+}
+
+#jonah ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: calc(1pc + 1pt);
+}
+
+#jonah ul li {
+  font-size: 1pc;
+  line-height: 1pc;
+  margin-bottom: calc(1pc + 2pt);
+  width: min-content;
+  white-space: nowrap;
+}
+
+#jonah ul li:before {
+  content: '- ';
+}
+
+#jonah ul li:nth-last-of-type(4):first-child,
+#jonah ul li:nth-last-of-type(4):first-child ~ li {
+  background: linear-gradient(to bottom right, lightgreen, darkgreen);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: calc(1pc + 1.5pt);
+}
+
+#jonah ul li:nth-last-of-type(4):first-child:hover,
+#jonah ul li:nth-last-of-type(4):first-child ~ li:hover {
+  transform: rotate(0.5turn);
+}
+
+#jonah ul li:nth-last-of-type(4):first-child:before,
+#jonah ul li:nth-last-of-type(4):first-child ~ li:before {
+  content: '✅';
+  margin-right: 1em;
+  font-size: 10pt;
+  position: relative;
+  top: -2pt;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
