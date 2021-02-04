@@ -201,25 +201,40 @@
 }
 
 #jelmer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	font-family: "Open sans", sans-serif;
 	--color-background: #4185d9 ; /* blauw tint */
 	--color-second-background: #cf3030; /* rood tint */
 	--color-third-background: #cfbf30; /*geel tint */
 }
 
-#jelmer div {
+#jelmer p {
+	margin: revert;
+}
+
+#jelmer div div {
 	width: 350px;
 	height: 350px;
 }
 
 /* Fallbacks */
 
-#jelmer section:nth-of-type(1) div:nth-of-type(1) {
+#jelmer section:nth-of-type(1) {
+	margin-bottom: 100px;
+}
+
+#jelmer section:nth-of-type(1)>div {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+#jelmer section:nth-of-type(1) div div div:nth-of-type(1) {
 	background: var(--color-background, green);
 	margin-bottom: 50px;
 }
 
-#jelmer section:nth-of-type(1) div:nth-of-type(1)>img {
+#jelmer section:nth-of-type(1) div div div:nth-of-type(1)>img {
 	width: 60%;
 	border-radius: 50%;
 	position: relative;
@@ -228,7 +243,7 @@
 	transform: translate(-50%, -50%);
 }
 
-#jelmer section:nth-of-type(1) div:nth-of-type(2) {
+#jelmer section:nth-of-type(1) div div div:nth-of-type(2) {
 	background: var(--color-background, var(--color-second-background, var(--color-third-background, green)));
 }
 
@@ -248,7 +263,7 @@
 	width: 150px;
 	height: 150px;
 	background: var(--color);
-	margin: 50px 0;
+	margin: 64px 0;
 	transform: rotate(calc(var(--i)*45deg));
 	margin-left: calc(var(--i)*60px);
 	transition: background 1s, transform 1s, margin-left 1s;
@@ -284,6 +299,8 @@
 #jelmer section:nth-of-type(3) {
 	background: var(--color-backgroundTheme);
 	color: var(--color-textTheme);
+	grid-column-start: 1;
+	grid-column-end: 3;
 }
 
 #jelmer section:nth-of-type(3) div:nth-of-type(1) {
