@@ -209,6 +209,10 @@
 	--color-third-background: #cfbf30; /*geel tint */
 }
 
+#jelmer p {
+	margin: revert;
+}
+
 #jelmer div div {
 	width: 350px;
 	height: 350px;
