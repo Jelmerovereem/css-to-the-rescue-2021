@@ -204,7 +204,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	font-family: "Open sans", sans-serif;
-	--color-background: #4185d9 ; /* blauw tint */
+	--color-backsground: #4185d9 ; /* blauw tint */
 	--color-second-background: #cf3030; /* rood tint */
 	--color-third-background: #cfbf30; /*geel tint */
 }

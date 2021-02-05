@@ -1,0 +1,79 @@
+:root {
+	--font: 'Lemonada'/*'poppins'*/;	
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font);
+	/*background: red;*/
+	height: 4000px;
+}
+
+main>section {
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+h1 {
+	color: red;
+	transform: scale(-1, 1);
+	display: inline-block;
+	transition: transform 1s;
+}
+
+h1:hover {
+	transform: scale(1);
+}
+
+main>section>article, main>article {
+	clip-path: polygon(25% 0, 25% 60%, 5% 60%, 50% 100%, 95% 60%, 75% 60%, 75% 0)/*circle(49% at 50% -16%)*/;/*polygon(50% 0, 100% 50%, 50% 100%, 0 50%)*/
+	border: 2px solid grey;
+	background: lightgreen;
+	height: 400px;
+	margin-bottom: 20px;
+	/*position: relative;*/
+	transition: 1s;
+}
+
+main>section>article:hover, main>article:hover {
+	clip-path: polygon(25% 0, 5% 50%, 5% 60%, 50% 100%, 95% 60%, 95% 50%, 75% 0);
+}
+
+main>section>article *, main>article * {
+	position: sticky /*fixed*/;
+	/*offset-path: path('M.51,13.05S-2,68,64.93,67.72,47.69-.85,116.06.52c56.79,1.14,63.49,44.38,64.13,59A18.24,18.24,0,0,1,179,66.23c-2.29,6.63,19,8.31,45.88-2.13');
+	animation: distance 10s forwards;*/
+	left: 900px;
+	text-align: center;
+	margin-top: 10px;
+	/*margin-left: 200px;*/
+	/*transition: all 1s;*/
+}
+
+@keyframes distance {
+	100% {
+		offset-distance: 100%;
+	}
+}
+
+main>section>article h3, main>article h3 {
+	top: 100px;
+}
+
+main>article>h3>div {
+	top: 130px;
+}
+
+main>section>article p, main>article>p {
+	top: 150px;
+	//width: 44%;
+}
+
+main>section>article div, main>article>div {
+	top: 200px;
+}
+
+h3 {
+	/*transform: rotate3d(1, 1, 1, 45deg);*/
+}
