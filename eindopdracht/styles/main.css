@@ -269,11 +269,16 @@ main>section>div>article>h3:hover {
 main>section>div>article p {
 	color: white;
 	font-weight: bold;
-	display: block;
+	display: inline-block;
+	width: 66%;
 }
 
 main>section>div>article div {
 	display: inline-block;
+}
+
+main>section>div>article div:before {
+	content: "€";
 }
 
 h3 {
@@ -281,11 +286,39 @@ h3 {
 }
 
 @media (prefers-reduced-motion) {
-	h2:before, h2:after {
-		animation: dissolve 2s;
+	h1 {
+		transform: translateY(0);
+		animation: none;
 	}
 
-	main>section>article, main>article {
+
+	h1:hover {
+		letter-spacing: initial;
+	}
+
+	header p {
+		animation: none;
+	}
+
+	input#switch:checked ~ h1 {
+		animation: change-color 1s forwards;
+	}
+
+	h2:before, h2:after {
+		display: none;
+		//animation: dissolve 2s;
+	}
+	
+	main>section>div>article {
 		transition: none;
 	}
+
+	main>section>div>article>h3 {
+		text-shadow: none;	
+	}
+
+	main>section>div>article>h3:hover {
+		text-shadow: none;
+	}
+	
 }
