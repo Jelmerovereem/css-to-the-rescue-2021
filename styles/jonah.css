@@ -1,20 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@200&family=Playfair+Display:wght@900&display=swap');
 
-input[value='us-letter']:checked ~ #jonah {
-  width: 8.5in;
-  height: 11in;
-}
-
-input[value='a4']:checked ~ #jonah {
-  width: 21cm;
-  height: 29.7cm;
-}
-
-input[value='a5']:checked ~ #jonah {
-  height: 21cm;
-  width: 148.5mm;
-}
-
 #jonah {
   box-sizing: border-box;
   padding: 4.5mm;
@@ -27,24 +12,20 @@ input[value='a5']:checked ~ #jonah {
     rgb(244, 159, 10) 13pt
   );
   font-family: 'Cabin', sans-serif;
+  border: 1px solid darkgrey;
 }
 
 #jonah * {
   margin: 0;
 }
 
-#jonah h2,
-#jonah h3 {
+#jonah h2 {
   font-family: 'Playfair Display', sans-serif;
   font-weight: 900;
   line-height: 2ex;
-}
-
-#jonah h2 {
   font-size: 2pc;
   margin-bottom: calc(1pc + 5pt);
 }
-
 #jonah p {
   font-size: 1pc;
   line-height: calc(1pc + 1pt);
@@ -93,6 +74,58 @@ input[value='a5']:checked ~ #jonah {
   font-size: 10pt;
   position: relative;
   top: -2pt;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+input[value='us-letter']:checked ~ #jonah {
+  width: 8.5in;
+  height: 11in;
+}
+
+input[value='a4']:checked ~ #jonah {
+  width: 21cm;
+  height: 29.7cm;
+}
+
+input[value='a5']:checked ~ #jonah {
+  height: 21cm;
+  width: 148.5mm;
+}
+
+input[value='responsive']:checked ~ #jonah {
+  width: min(100%, 80rem);
+  background: white;
+  padding: 1rem;
+  margin-bottom: 4rem;
+}
+
+input[value='responsive']:checked ~ #jonah h2 {
+  font-size: min(12rem, max(6vmin, 2rem));
+  font-size: clamp(2rem, 6vmin, 12rem);
+  line-height: 1.125em;
+}
+
+input[value='responsive']:checked ~ #jonah p,
+input[value='responsive']:checked ~ #jonah ul li {
+  font-size: clamp(1rem, 3vmin, 3rem);
+  line-height: 1.5em;
+}
+
+input[value='responsive']:checked
+  ~ #jonah
+  ul
+  li:nth-last-of-type(4):first-child:before,
+input[value='responsive']:checked
+  ~ #jonah
+  ul
+  li:nth-last-of-type(4):first-child
+  ~ li:before {
+  content: '✅';
+  margin-right: 1em;
+  font-size: clamp(1rem, 3vmin, 3rem);
+  position: static;
   background-clip: initial;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
