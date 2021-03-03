@@ -17,9 +17,9 @@ body {
 }
 
 main {
-	--grid-min-size: 700px;
-	display:grid;
-	grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-size), 1fr));
+	--auto-grid-min-size: min(100%, 700px);
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
 }
 
 main>section:nth-child(even) {
@@ -99,16 +99,6 @@ input#switch:checked ~ label>.knifeSvg>path:nth-child(n+6) {
 	100% {
 		color: #831616;
 	}
-} 
-
-h1>span:first-child {
-	font-size: 2em;
-}
-
-
-h1>span:nth-child(2) {
-	position: absolute;
-	top: 12%;
 }
 
 body>header {
@@ -123,9 +113,10 @@ label[for="switch"] {
 }
 
 .knifeSvg {
+	width: 80%;
 	position: absolute;
 	top: 50%;
-	left: 14%;
+	left: -14%;
 	transform: rotate(-50deg);
 	transition: all 1s;
 }
@@ -161,6 +152,7 @@ h2 {
 	margin-left: 20px;
 	margin-top: 0;
 	color: white;
+	width: fit-content;
 }
 
 h2:hover:before {
@@ -293,6 +285,7 @@ cite:hover {
 }
 
 main>section>div>article {
+	width: 90%;
 	display: grid;
 	align-items: center;
 	grid-template-columns: 90% 10%;
@@ -328,9 +321,8 @@ main>section>div>article p {
 }
 
 main>section>div>article div {
-	margin-right: 50px;
 	grid-area: price;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	font-weight: 700;
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke-width: 1px;
