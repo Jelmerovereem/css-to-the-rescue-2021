@@ -1,0 +1,88 @@
+@media print {
+	body {
+		background: none;
+	}
+
+	body>header {
+		background: var(--color-red);
+	}
+
+	h1 {
+		transform: translateY(0);
+		animation: none;
+	}
+
+	h1:hover {
+		letter-spacing: initial;
+	}
+
+	.knifeSvg {
+		display: none;
+	}
+
+	main {
+		display: block;
+	}
+
+	body>header, main>section {
+		width: 210mm;
+		height: 297mm;
+	}
+
+	header p {
+		animation: none;
+		font-variation-settings: "wght" 500;
+		letter-spacing: 2px;
+		text-shadow: -10px -10px 3px #cc4d4d;
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	h2:before, h2:after {
+		animation: none;
+		//display: none;
+	}
+
+	h2:hover:before, h2:hover:after {
+		animation: none;
+	}
+
+	main>section:nth-child(even) {
+		background: var(--color-red);
+		animation: none;
+	}
+
+	main>section>div>article {
+		transition: none;
+	}
+
+	main>section>div>article>h3 {
+		text-shadow: none;
+	}
+
+	main>section>div>article>h3:hover {
+		text-shadow: none;
+	}
+
+	blockquote, blockquote * {
+		margin: 0;
+	}
+
+	blockquote>p:first-child>span {
+		background: none;
+		color: lightgreen;
+		animation: none;
+		-webkit-background-clip: unset;
+		-webkit-text-fill-color: unset;
+	}
+
+	main>p {
+		display: none;
+	}
+
+	main>svg {
+		display: none;
+	}
+}
