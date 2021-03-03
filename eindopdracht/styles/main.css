@@ -17,7 +17,7 @@ body {
 }
 
 main {
-	--auto-grid-min-size: min(100%, 700px);
+	--auto-grid-min-size: clamp(50%, 700px, 100%);
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
 }
